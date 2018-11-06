@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
 export default class App extends Component {
+    state = {
+        name: "Piotr"
+    }
     render() {
         return (
-          <div>APP COMPONENT</div>  
+          <div>{this.state.name}</div>  
         );
     }
 }
