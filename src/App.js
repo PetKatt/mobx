@@ -1,9 +1,16 @@
 import React, { Component } from "react";
+import { observer } from "mobx-react";
 
-export default class App extends Component {
+@observer
+class App extends Component {
     render() {
         return (
-          <div>APP COMPONENT</div>  
-        );
+        <div>
+            <div>APP COMPONENT</div> 
+            <div>{this.props.store.name}</div> 
+        </div>
+        )
     }
 }
+
+export default App
